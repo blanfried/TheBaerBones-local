@@ -1,20 +1,24 @@
 # Your Website - Netlify Ready Edition
 
-Congratulations! Your website has been processed and is ready for deployment on Netlify.
+Congratulations! Your website has been processed and is ready for a professional deployment on Netlify.
 
-## Feature: Netlify Forms
+## CRITICAL: How to Activate Netlify Forms
 
-Your site's forms have been automatically configured to work with Netlify's form handling. When you deploy the site, any form submissions will appear in your Netlify dashboard.
+After you deploy your site to Netlify, you must activate form detection for your new forms to work.
 
-**How it works:**
-- An attribute `data-netlify="true"` has been added to your `<form>` tags.
-- A hidden input `<input type="hidden" name="form-name" ...>` has been added to each form.
-- A "honeypot" field to catch spam bots has also been included.
+1.  Go to your site's dashboard on Netlify.
+2.  Navigate to **Site configuration > Forms**.
+3.  Under **Form detection**, ensure it is enabled. If you have just deployed, it should find your forms automatically.
 
-There is no further configuration needed. Simply deploy the contents of the ZIP file to Netlify.
+Any form submissions will now appear in your Netlify dashboard's "Forms" section.
 
-## Feature: Clean URLs
+## Spam Filtering & reCAPTCHA
 
-Your site's links will appear "clean" (e.g., `yoursite.com/about/`) when hosted. The included `.htaccess` file enables this on traditional servers, and Netlify handles this automatically.
+Netlify provides automatic, powerful spam filtering out of the box using Akismet. Because of this, any reCAPTCHA elements provided by Webflow have been **completely removed** from your site's code. This provides a cleaner user experience and relies on Netlify's superior server-side filtering.
 
-For local viewing, links have been corrected to work properly when you open `index.html` on your computer.
+A "honeypot" field (invisible to users) has also been added to each form as an additional layer of spam protection.
+
+## Feature: Clean URLs & Anti-Interference
+
+-   Your site's links will work with "clean" URLs (e.g., `yoursite.com/about/`).
+-   A script has been injected to ensure Webflow's native form JavaScript does not interfere with Netlify's form submission process.
