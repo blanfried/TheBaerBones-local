@@ -3809,6 +3809,10 @@ figcaption {
   display: flex;
 }
 
+.accordion.portfolio-itme {
+  margin-top: 40px;
+}
+
 .accordion-tab {
   flex: none;
   width: 100%;
@@ -12157,12 +12161,8 @@ figcaption {
   grid-area: 2 / 5 / 3 / 9;
 }
 
-#w-node-dd85d3f1-ce48-d7f9-d764-d4098e1b97e6-8c682cca {
+#w-node-_643a5142-918b-e699-24ce-62d9517da235-8c682cca, #w-node-dd85d3f1-ce48-d7f9-d764-d4098e1b97e6-8c682cca {
   grid-area: 1 / 1 / 2 / 2;
-}
-
-#w-node-ea45dcdd-f32e-e4df-842f-f3d98c682cd3-8c682cca {
-  grid-area: 1 / 1 / 2 / 3;
 }
 
 #w-node-ea45dcdd-f32e-e4df-842f-f3d98c682ce1-8c682cca, #w-node-ea45dcdd-f32e-e4df-842f-f3d98c682cfb-8c682cca, #w-node-_498f41b0-8639-da8b-c3b9-85299b0854a3-8c682cca, #w-node-_1169293e-7d04-2d7a-26fd-5bfecae912cd-8c682cca, #w-node-ea45dcdd-f32e-e4df-842f-f3d98c682d1e-8c682cca, #w-node-ea45dcdd-f32e-e4df-842f-f3d98c682d31-8c682cca, #w-node-b42be0ca-c3a1-f6f8-018a-6b1349f9668e-8c682cca, #w-node-_757a442a-1027-ddaf-6fda-642051fabcf1-8c682cca {
