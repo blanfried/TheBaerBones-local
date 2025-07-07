@@ -5246,7 +5246,7 @@ figcaption {
   line-height: 140%;
   transition: box-shadow .5s cubic-bezier(.25, .46, .45, .94), transform .5s cubic-bezier(.25, .46, .45, .94);
   display: flex;
-  position: fixed;
+  position: relative;
   overflow: hidden;
 }
 
