@@ -1,13 +1,5 @@
-# Netlify Configuration File
-# This controls redirects, rewrites, and other server-side behavior.
-
-# This is the rewrite rule that enables clean URLs for your pages.
 [[rewrites]]
-  # For any path requested that is not a file...
   from = "/*"
-  # ...silently serve the corresponding .html file from the /pages directory.
   to = "/pages/:splat.html"
-  # A 200 status means it's a rewrite (URL stays the same), not a redirect.
   status = 200
-  # This condition prevents the rule from applying to existing files (like assets).
   force = false
