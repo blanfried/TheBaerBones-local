@@ -1,0 +1,13 @@
+# Webflow Processor .htaccess For Clean URLs
+<IfModule mod_rewrite.c>
+RewriteEngine On
+RewriteBase /
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_URI} !(.*)/$
+RewriteRule ^(.*)$ $1/ [L,R=301]
+RewriteRule ^(index/)?$ index.html [L]
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{DOCUMENT_ROOT}/pages/$1.html -f
+RewriteRule ^(.+)/$ pages/$1.html [L]
+</IfModule>
