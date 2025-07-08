@@ -1,4 +1,12 @@
-[[rewrites]]
-  from = "/*"
-  to = "/pages/:splat.html"
-  status = 404
+[build]
+  publish = "."
+
+[[redirects]]
+  from = "/"
+  to = "/index.html"
+  status = 200
+
+[[redirects]]
+  from = "/:page"
+  to = "/pages/:page.html"
+  status = 200
