@@ -14,6 +14,17 @@ This is handled by a special Netlify configuration file named `netlify.toml` tha
 
 ---
 
+## IMPORTANT: Image Naming Best Practices
+
+This script works by copying **all** images from your Webflow project's `images` folder into a single `assets/images` directory. For this process to be successful, it is crucial to follow good naming conventions within your Webflow project.
+
+*   **Use Unique & Descriptive Names:** Avoid generic names like `image1.jpg` or `icon.svg`. A name like `about-page-hero-background.jpg` is much better. If you use the same filename for two different images in your Webflow project, one may be overwritten, causing an image to go missing on your live site.
+*   **Use Web-Safe Characters:** Stick to letters, numbers, hyphens (`-`), and underscores (`_`). **Avoid spaces, special characters (`&`, `?`, `%`, etc.), and uppercase letters**, as they can cause unexpected issues with URL paths and file matching.
+
+Following these practices in Webflow will prevent broken images and ensure your site is processed correctly every time.
+
+---
+
 ## CRITICAL: How to Activate Netlify Forms
 
 After you deploy your site to Netlify, you must activate form detection for your new forms to work.
