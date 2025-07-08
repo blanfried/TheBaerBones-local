@@ -1,17 +1,18 @@
 # Netlify Configuration File for Clean URLs
 
-# Rule 1: This is the primary rule for all subpages.
-# It rewrites any path that is not a file to the /pages directory.
+# Rule 1: This rule specifically handles the homepage.
+# A request to the root "/" is served the main index.html file.
+[[rewrites]]
+  from = "/"
+  to = "/index.html"
+  status = 200
+
+# Rule 2: This is the primary rule for all subpages.
+# It rewrites any other path (like /about) to the corresponding
+# file in the /pages directory (e.g., /pages/about.html).
+# This rule will NOT apply to existing files like assets or the index.html
+# handled by the rule above.
 [[rewrites]]
   from = "/*"
   to = "/pages/:splat.html"
-  status = 200
-  force = false # IMPORTANT: Prevents this rule from catching assets like /assets/css/style.css
-
-# Rule 2: This is the fallback for the homepage.
-# If a request makes it past the first rule (e.g., because /pages/:splat.html didn't exist),
-# this rule will serve the index.html from the root. This effectively handles the homepage request.
-[[rewrites]]
-  from = "/*"
-  to = "/index.html"
   status = 200
