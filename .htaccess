@@ -1,13 +1,30 @@
-# Webflow Processor .htaccess For Clean URLs
-<IfModule mod_rewrite.c>
+# Turn on the URL rewriting engine
 RewriteEngine On
+
+# Set the base directory for all rewrite rules.
 RewriteBase /
+
+# Rule 1: Internally rewrite requests to files within the /pages/ directory.
+# This is the primary rule for all your subpages.
+# ----------------------------------------------------------------------
+# Condition: The request is NOT for an existing file.
 RewriteCond %{REQUEST_FILENAME} !-f
-RewriteCond %{REQUEST_URI} !(.*)/$
-RewriteRule ^(.*)$ $1/ [L,R=301]
-RewriteRule ^(index/)?$ index.html [L]
-RewriteCond %{REQUEST_FILENAME} !-f
+# Condition: The request is NOT for an existing directory.
 RewriteCond %{REQUEST_FILENAME} !-d
+# Condition: A file with the requested name + .html EXISTS inside the /pages/ folder.
+# Example: For a request to "/about", this checks if "/pages/about.html" exists.
 RewriteCond %{DOCUMENT_ROOT}/pages/$1.html -f
-RewriteRule ^(.+)/$ pages/$1.html [L]
-</IfModule>
+# Action: If all conditions are met, silently rewrite the URL to the correct file.
+# The [L] flag means "Last rule" - stop processing if this rule matches.
+RewriteRule ^(.+)$ /pages/$1.html [L]
+
+# Rule 2: Internally rewrite requests for any other .html files in the root.
+# This is a fallback for any pages that aren't in the /pages/ folder.
+# ----------------------------------------------------------------------
+# Condition: The request is NOT for an existing file.
+RewriteCond %{REQUEST_FILENAME} !-f
+# Condition: The request is NOT for an existing directory.
+RewriteCond %{REQUEST_FILENAME} !-d
+# Action: Try to append .html to the request and serve that file.
+# Example: A request to "/contact" would be rewritten to "/contact.html".
+RewriteRule ^(.+)$ /$1.html [L]
