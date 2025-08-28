@@ -11646,7 +11646,7 @@ figcaption {
     padding-right: 10px;
   }
 
-  .container.about-narrative {
+  .container.about-narrative, .container.theresearch {
     padding-left: 15px;
     padding-right: 15px;
   }
@@ -11806,6 +11806,10 @@ figcaption {
     font-size: 13px;
   }
 
+  .paragraph-small.text-color-light.research-stat {
+    font-size: 16px;
+  }
+
   .text-size-tiny-caps.text-color-light {
     color: var(--text-color-light);
   }
@@ -11841,11 +11845,15 @@ figcaption {
 
   .text-color-light.maxw-title-metric-spotlight.text-spacing-0em {
     max-width: 100%;
-    font-size: 28px;
+    font-size: 36px;
   }
 
   .text-color-light.maxw-title-contact-form {
     font-weight: 600;
+  }
+
+  .text-color-light.maxw-title-contact-us.text-spacing-0em.text-color-dark {
+    font-size: 36px;
   }
 
   .rich-text li {
