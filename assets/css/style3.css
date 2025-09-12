@@ -3509,6 +3509,10 @@ figcaption {
   position: fixed;
 }
 
+.fullscreen-menu-container.menu-navbar-dark.portfolio {
+  display: none;
+}
+
 .navbar-light {
   z-index: 2;
   width: 100%;
