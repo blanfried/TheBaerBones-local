@@ -6242,7 +6242,7 @@ figcaption {
 
 .light-link {
   color: var(--text-color-light);
-  text-decoration: underline;
+  text-decoration: none;
 }
 
 .text-block-2 {
