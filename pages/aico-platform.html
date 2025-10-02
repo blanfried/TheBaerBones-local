@@ -1,4 +1,4 @@
-<!DOCTYPE html><!--  This site was created in Webflow. https://webflow.com  --><!--  Last Published: Tue Sep 30 2025 22:49:04 GMT+0000 (Coordinated Universal Time)  -->
+<!DOCTYPE html><!--  This site was created in Webflow. https://webflow.com  --><!--  Last Published: Thu Oct 02 2025 17:17:31 GMT+0000 (Coordinated Universal Time)  -->
 <html data-wf-page="68657e4b584b361ed4951066" data-wf-site="668ec3c274bf178a1700baab" lang="en">
 <head>
   <meta charset="utf-8">
@@ -418,13 +418,19 @@
         <div class="project-wrapper">
           <div class="journey-phase-title">Phase 2</div>
           <div class="journey-items-wrapper">
-            <div class="project-image-2 two">
-              <div class="project-image-overlay"></div>
+            <div class="phases-double-image-grid">
+              <div class="project-image-2 two dbl-img dbl-img-1">
+                <div class="project-image-overlay"></div>
+              </div>
+              <p id="w-node-_542ec1e5-102c-1a39-0fc5-a2604f26d8ce-d4951066" class="paragraph-30 project image-subtext dbl-image-subtext">While in Florida meeting with B2B partners (e.g. Rooms To Go). Left to right: Me, Frank Lorenzo (Florida Sales Rep), Michael Amini (CEO), Kian Amini (VP of Sales), David Koehler (President)</p>
+              <div class="project-image-2 two dbl-img dbl-img-2">
+                <div class="project-image-overlay"></div>
+              </div>
+              <p class="paragraph-30 project image-subtext dbl-image-subtext">City of Hope fundraiser at High Point Furniture Market in NC. Left to right: Dominic Hart (Vietnam QC Specialist), Kian Amini (VP of Sales), Me</p>
             </div>
-            <p class="paragraph-30 project image-subtext">At City of Hope fundraiser in High Point, NC. From left to right: Dominic Hart (Vietnam QC Specialist), Kian Amini (Director of Sales), Myself</p>
             <div class="project-details-wrapper">
               <h3 class="heading-h3">Multi-User Research</h3>
-              <p class="paragraph-30 project">Field research at High Point Market expanded on Phase 1&#x27;s internal staff findings by providing access to AICO&#x27;s sales team and retail partners. Interviews with 50+ sales representatives and client meetings revealed three distinct user groups: internal AICO staff, sales representatives and established retail partners requiring rapid product information access, and prospective retailers/consumers needing comprehensive product browsing capabilities.<br><br>Google Analytics analysis revealed performance gaps including 81% homepage bounce rate with users unable to determine next steps within 25 seconds, and mobile users experiencing 48% shorter session durations due to linear scaling issues rather than responsive design.<br><br>Post-market surveys collected additional feedback from sales representatives after reflection periods. This research confirmed misalignment between the platform&#x27;s navigation structure and users&#x27; task-oriented needs, with conversion barriers preventing productive business interactions across all three personas.</p>
+              <p class="paragraph-30 project">Field research at High Point Furniture Market and other business trips expanded on Phase 1&#x27;s internal staff findings by providing access to AICO&#x27;s sales team and retail partners. Interviews with 50+ sales representatives and client meetings revealed three distinct user groups: internal AICO staff, sales representatives and established retail partners requiring rapid product information access, and prospective retailers/consumers needing comprehensive product browsing capabilities.<br><br>Google Analytics analysis revealed performance gaps including 81% homepage bounce rate with users unable to determine next steps within 25 seconds, and mobile users experiencing 48% shorter session durations due to linear scaling issues rather than responsive design.<br><br>Post-market surveys collected additional feedback from sales representatives after reflection periods. This research confirmed misalignment between the platform&#x27;s navigation structure and users&#x27; task-oriented needs, with conversion barriers preventing productive business interactions across all three personas.</p>
             </div>
           </div>
         </div>
@@ -456,7 +462,7 @@
                     <div class="content-accordion-tab">
                       <div class="margin-bottom-50px">
                         <div class="h6-text-block">
-                          <p class="paragraph-30 project">The constraints required converting Webflow exports into a format compatible with the overarching AICO website file structure while maintaining database connections. Updates from Webflow needed to be reflected within the root ASP files not included in Webflow folder. This would ensure any change made on Webflow would be reflected across the entire website without breaking any connections to the backend.<br><br>To achieve this, we built a Webflow export processing application. Given strict IT security constraints, PHP was chosen, over options like Python or Node.js, for its web-native HTML manipulation, file system capabilities, and compatibility with our existing servers. Tasks that would take nearly three hours manually are now completed in seconds:<br>‍<br>• Converts the Webflow export file-based links into clean, directory-based URLs for SEO and that adhere to the root folder config file.<br>‍<br>• Replaces Webflow&#x27;s disabled form handling with secure PHP form processing that connects to the server php smtp libraries and uses a .env file to maintain security standards.<br>‍<br>• Scans HTML files to identify assets, copies them into organized /assets directory, and updates every src and href path.<br>‍<br>• Injects a pre-built search bar into navigation menu, connecting search functionality from webflow folder to root AICO website folder.<br>‍<br>• Isolates the Webflow menu and footer sections as separate HTML files that every root file is connects to.<br>‍<br>• Processes code embeds throughout the webflow project and adds the necessary code to make them function only within the main AICO website folder.<br><br>The processed folder is contained within one swappable folder in the overarching AICO website. Root files route to the necessary files within the webflow folder and were changed throughout to properly connect to any new styling or functionality coming from the webflow folder. Marketing can now design on webflow, export, process via the application, and simply swap folders to update the entire site.<br><br>Security was maintained by using the php contact form and by circumventing webflow hosting entirely. The file structure allows updates through external platforms integrated with on-premise servers and files which contain security features preventing database access.<br><br>This automation transformed a complicated website with thousands of skus into a system where everything can be styled by non-technical users and exported while maintaining and updating sku connections.<br></p>
+                          <p class="paragraph-30 project">The constraints required converting Webflow exports into a format compatible with the overarching AICO website file structure while maintaining database connections. Updates from Webflow needed to be reflected within the root ASP files not included in Webflow folder. This would ensure any change made on Webflow would be reflected across the entire website without breaking any connections to the backend.<br><br>To achieve this, we built a Webflow export processing application. Given strict IT security constraints, PHP was chosen, over options like Python or Node.js, for its compatibility with our existing servers. Tasks that would take nearly three hours manually are now completed in seconds:<br>‍<br>• Converts the Webflow export file-based links into clean, directory-based URLs for SEO and that adhere to the root folder config file.<br>‍<br>• Replaces Webflow&#x27;s disabled form handling with secure PHP form processing that connects to the server php smtp libraries and uses a .env file to maintain security standards.<br>‍<br>• Scans HTML files to identify assets, copies them into organized assets/ directory, and updates every src and href path.<br>‍<br>• Injects a pre-built search bar into navigation menu, connecting search functionality from webflow folder to root AICO website folder.<br>‍<br>• Isolates the Webflow menu and footer sections as separate HTML files that every root file is connects to.<br>‍<br>• Processes code embeds throughout the webflow project and adds the necessary code to make them function only within the main AICO website folder.<br><br>The processed folder is contained within one swappable folder in the overarching AICO website. Root files route to the necessary files within the webflow folder and were changed throughout to properly connect to any new styling or functionality coming from the webflow folder. Marketing can now design on webflow, export, process via the application, and simply swap folders to update the entire site.<br><br>Security was maintained by using the php contact form and by circumventing webflow hosting entirely. The file structure allows updates through external platforms integrated with on-premise servers and files which contain security features preventing database access.<br><br>This automation transformed a complicated website with thousands of skus into a system where everything can be styled by non-technical users and exported while maintaining and updating sku connections.<br></p>
                         </div>
                       </div>
                     </div>
@@ -469,10 +475,16 @@
         <div class="project-wrapper">
           <div class="journey-phase-title">Phase 4</div>
           <div class="journey-items-wrapper">
-            <div class="project-image-2 img-4">
-              <div class="project-image-overlay"></div>
+            <div class="phases-double-image-grid">
+              <div class="project-image-2 img-4 dbl-img dbl-img-1">
+                <div class="project-image-overlay"></div>
+              </div>
+              <p id="w-node-_66ac93fc-cafa-5d01-6bcc-01543c23134a-d4951066" class="paragraph-30 project image-subtext dbl-image-subtext">AICO internal employee training session.</p>
+              <div class="project-image-2 img-4 dbl-img dbl-img-2">
+                <div class="project-image-overlay"></div>
+              </div>
+              <p id="w-node-_5cc78856-cffa-1515-9b82-ffa835cf0a43-d4951066" class="paragraph-30 project image-subtext dbl-image-subtext">AICO internal employee training session.</p>
             </div>
-            <p class="paragraph-30 project image-subtext">AICO internal employee training session.</p>
             <div class="project-details-wrapper">
               <h3 class="heading-h3">Deployment and Optimization</h3>
               <p class="paragraph-30 project">For pre-launch testing, we commandeered the Marketing conference room, set up devices of varying screen sizes, and held testing sessions over several weeks to find bugs and gather last minute feedback from internal AICO employees.<br><br>We used Google Analytics to identify the lowest traffic during business hours (8-9am and 4-5pm) for live server testing with the updated config file. To preempt caching issues, we implemented versioning across all necessary files and adjusted caching preferences in the config to allow for updates to be accepted without conflict across user’s machines.<br><br>Due to prior canvassing, training, and testing, resistance to the new platform was minimal. There was slight resistance to the new “collection” page flow as to how it should be organized (A-Z or by style), but the data backing this update quickly prevailed.<br><br>Post-launch issues included contact form spam protections that needed tightening and last minute executive requests to add back features like the “decor” page flow that had been removed due to miscommunication. We used Clarity and Google Analytics to test performance against initial problem metrics (see metrics details in Results section).<br></p>
@@ -515,13 +527,13 @@
       <div class="sticky-fullscreen-container">
         <div class="zoomed-outer">
           <div class="w-layout-grid grid-photos-zoom-out">
-            <div id="w-node-_4954a81a-5f94-9d7f-5682-9b48d0a6d102-d4951066" class="wrap-photo-zoom-out hide-991"><img sizes="(max-width: 1280px) 100vw, 1280px" alt="" src="../assets/images/StylesNew.jpeg" loading="lazy" class="image"></div>
+            <div id="w-node-_4954a81a-5f94-9d7f-5682-9b48d0a6d102-d4951066" class="wrap-photo-zoom-out hide-991"><img sizes="(max-width: 1919px) 100vw, 5120px" alt="" src="../assets/images/StylesNew.jpeg" loading="lazy" class="image"></div>
             <div id="w-node-_4954a81a-5f94-9d7f-5682-9b48d0a6d104-d4951066" class="wrap-photo-zoom-out hide-478"></div>
-            <div id="w-node-_4954a81a-5f94-9d7f-5682-9b48d0a6d105-d4951066" class="wrap-photo-zoom-out"><img sizes="(max-width: 1280px) 100vw, 1280px" alt="" src="../assets/images/ProductPage.jpeg" loading="lazy" class="image"></div>
-            <div id="w-node-_4954a81a-5f94-9d7f-5682-9b48d0a6d107-d4951066" class="wrap-photo-zoom-out"><img sizes="(max-width: 1280px) 100vw, 1280px" alt="" src="../assets/images/ProductListings.jpeg" loading="lazy" class="image"></div>
-            <div id="w-node-_4954a81a-5f94-9d7f-5682-9b48d0a6d109-d4951066" class="wrap-photo-zoom-out hide-991"><img sizes="(max-width: 1280px) 100vw, 1280px" alt="" src="../assets/images/ProductCategories.jpeg" loading="lazy" class="image"></div>
-            <div id="w-node-_4954a81a-5f94-9d7f-5682-9b48d0a6d10b-d4951066" class="wrap-photo-zoom-out hide-478"><img sizes="(max-width: 1280px) 100vw, 1280px" alt="" src="../assets/images/CollectionsMenu.jpeg" loading="lazy" class="image"></div>
-            <div id="w-node-_4954a81a-5f94-9d7f-5682-9b48d0a6d10d-d4951066" class="wrap-photo-zoom-out"><img sizes="(max-width: 1280px) 100vw, 1280px" alt="" src="../assets/images/Homepage.jpeg" loading="lazy" class="image"></div>
+            <div id="w-node-_4954a81a-5f94-9d7f-5682-9b48d0a6d105-d4951066" class="wrap-photo-zoom-out"><img sizes="(max-width: 1919px) 100vw, 5120px" alt="" src="../assets/images/ProductPage.jpeg" loading="lazy" class="image"></div>
+            <div id="w-node-_4954a81a-5f94-9d7f-5682-9b48d0a6d107-d4951066" class="wrap-photo-zoom-out"><img sizes="(max-width: 1919px) 100vw, 5120px" alt="" src="../assets/images/ProductListings.jpeg" loading="lazy" class="image"></div>
+            <div id="w-node-_4954a81a-5f94-9d7f-5682-9b48d0a6d109-d4951066" class="wrap-photo-zoom-out hide-991"><img sizes="(max-width: 1919px) 100vw, 5120px" alt="" src="../assets/images/ProductCategories.jpeg" loading="lazy" class="image"></div>
+            <div id="w-node-_4954a81a-5f94-9d7f-5682-9b48d0a6d10b-d4951066" class="wrap-photo-zoom-out hide-478"><img sizes="(max-width: 1919px) 100vw, 5120px" alt="" src="../assets/images/CollectionsMenu.jpeg" loading="lazy" class="image"></div>
+            <div id="w-node-_4954a81a-5f94-9d7f-5682-9b48d0a6d10d-d4951066" class="wrap-photo-zoom-out"><img sizes="(max-width: 1919px) 100vw, 5120px" alt="" src="../assets/images/Homepage.jpeg" loading="lazy" class="image"></div>
           </div>
         </div>
         <div class="zoomed-inner">
