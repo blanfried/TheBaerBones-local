@@ -1,0 +1,227 @@
+<svg width="100%" viewBox="0 0 780 660" xmlns="http://www.w3.org/2000/svg">
+<defs>
+  <marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+    <path d="M2 1L8 5L2 9" fill="none" stroke="context-stroke" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+  </marker>
+</defs>
+<style>
+  .t  { font-family: system-ui, -apple-system, sans-serif; font-size: 14px; font-weight: 400; }
+  .th { font-family: system-ui, -apple-system, sans-serif; font-size: 14px; font-weight: 500; }
+  .ts { font-family: system-ui, -apple-system, sans-serif; font-size: 12px; font-weight: 400; }
+  .zone-label { font-family: system-ui, -apple-system, sans-serif; font-size: 11px; font-weight: 400; letter-spacing: 0.08em; }
+  .src rect { fill: #fdf0f1; stroke: #722f37; stroke-width: 0.5; }
+  .src .th { fill: #4d1f24; }
+  .step rect { fill: #f5eaeb; stroke: #8a3a43; stroke-width: 0.5; }
+  .step .th { fill: #4d1f24; }
+  .step .ts { fill: #6b3035; }
+  .srv rect { fill: #f0eeed; stroke: #555; stroke-width: 0.5; }
+  .srv .th { fill: #1e1d1e; }
+  .srv .ts { fill: #555; }
+  .wf rect { fill: #f8f2f3; stroke: #8a3a43; stroke-width: 0.5; }
+  .wf .ts { fill: #6b3035; }
+  .ext rect { fill: #f5f0eb; stroke: #7a6a55; stroke-width: 0.5; }
+  .ext .th { fill: #3d3225; }
+  .ext .ts { fill: #8a7a65; }
+  .cms rect { fill: #faf5ee; stroke: #9a8565; stroke-width: 0.5; }
+  .cms .th { fill: #3d3225; }
+  .cms .ts { fill: #8a7a65; }
+  @media (prefers-color-scheme: dark) {
+    .src rect { fill: #4d1f24; stroke: #c97a80; }
+    .src .th { fill: #f0d0d3; }
+    .step rect { fill: #3e1a1e; stroke: #b56b72; }
+    .step .th { fill: #ecc8cb; }
+    .step .ts { fill: #c99297; }
+    .srv rect { fill: #2a2a2a; stroke: #888; }
+    .srv .th { fill: #ddd; }
+    .srv .ts { fill: #aaa; }
+    .wf rect { fill: #3e1a1e; stroke: #b56b72; }
+    .wf .ts { fill: #c99297; }
+    .ext rect { fill: #3a3225; stroke: #b8a88a; }
+    .ext .th { fill: #e0d5c2; }
+    .ext .ts { fill: #c4b49a; }
+    .cms rect { fill: #3a3225; stroke: #b8a88a; }
+    .cms .th { fill: #e0d5c2; }
+    .cms .ts { fill: #c4b49a; }
+    .zone-label { fill: #999; }
+    .zl { stroke: rgba(255,255,255,0.15); }
+    .ctr { stroke: rgba(255,255,255,0.25); }
+    .cl { fill: #999; }
+    .al { stroke: rgba(255,255,255,0.4); }
+    .sl { fill: #999; }
+    .wfs { stroke: #b56b72; }
+    .wfl { fill: #b56b72; }
+    .el { stroke: #b8a88a; }
+  }
+  .zone-label { fill: #777; }
+  .zl { stroke: rgba(0,0,0,0.12); }
+  .ctr { stroke: rgba(0,0,0,0.25); }
+  .cl { fill: #777; }
+  .al { stroke: #323232; }
+  .sl { fill: #777; }
+  .wfs { stroke: #8a3a43; }
+  .wfl { fill: #8a3a43; }
+  .el { stroke: #7a6a55; }
+</style>
+
+<!-- Zone labels: pushed up, line lower, more space before content -->
+<text class="zone-label" x="16" y="14">OFFLINE</text>
+<line class="zl" x1="16" y1="24" x2="270" y2="24" stroke-width="0.8"/>
+<text class="zone-label" x="400" y="14">ON-SERVER</text>
+<line class="zl" x1="400" y1="24" x2="620" y2="24" stroke-width="0.8"/>
+
+<!-- Webflow source -->
+<g class="src">
+  <rect x="16" y="58" width="130" height="42" rx="8"/>
+  <text class="th" x="81" y="79" text-anchor="middle" dominant-baseline="central">Webflow</text>
+</g>
+<text class="ts sl" x="81" y="112" text-anchor="middle">export.zip</text>
+
+<!-- Arrow: Webflow to PHP app -->
+<line class="al" x1="146" y1="79" x2="176" y2="79" stroke-width="1.5" marker-end="url(#arrow)"/>
+
+<!-- PHP App container -->
+<rect class="ctr" x="178" y="46" width="180" height="570" rx="12" fill="none" stroke-width="1"/>
+<text class="ts cl" x="268" y="40" text-anchor="middle">PHP processing app</text>
+
+<!-- Step 1: Ingest export -->
+<g class="step"><rect x="190" y="60" width="156" height="48" rx="8"/>
+  <text class="th" x="268" y="78" text-anchor="middle" dominant-baseline="central">1. Ingest export</text>
+  <text class="ts" x="268" y="96" text-anchor="middle" dominant-baseline="central">Unzip Webflow export</text>
+</g>
+<line class="al" x1="268" y1="108" x2="268" y2="122" stroke-width="1.5" marker-end="url(#arrow)"/>
+
+<!-- Step 2: Asset pipeline -->
+<g class="step"><rect x="190" y="122" width="156" height="48" rx="8"/>
+  <text class="th" x="268" y="140" text-anchor="middle" dominant-baseline="central">2. Asset pipeline</text>
+  <text class="ts" x="268" y="158" text-anchor="middle" dominant-baseline="central">Scan, copy, rewrite paths</text>
+</g>
+<line class="al" x1="268" y1="170" x2="268" y2="184" stroke-width="1.5" marker-end="url(#arrow)"/>
+
+<!-- Step 3: Search injection -->
+<g class="step"><rect x="190" y="184" width="156" height="48" rx="8"/>
+  <text class="th" x="268" y="202" text-anchor="middle" dominant-baseline="central">3. Search injection</text>
+  <text class="ts" x="268" y="220" text-anchor="middle" dominant-baseline="central">Search bar into nav</text>
+</g>
+<line class="al" x1="268" y1="232" x2="268" y2="246" stroke-width="1.5" marker-end="url(#arrow)"/>
+
+<!-- Step 4: URL rewriting -->
+<g class="step"><rect x="190" y="246" width="156" height="48" rx="8"/>
+  <text class="th" x="268" y="264" text-anchor="middle" dominant-baseline="central">4. URL rewriting</text>
+  <text class="ts" x="268" y="282" text-anchor="middle" dominant-baseline="central">HTML to ASP, clean URLs</text>
+</g>
+<line class="al" x1="268" y1="294" x2="268" y2="308" stroke-width="1.5" marker-end="url(#arrow)"/>
+
+<!-- Step 5: DB connection -->
+<g class="step"><rect x="190" y="308" width="156" height="48" rx="8"/>
+  <text class="th" x="268" y="326" text-anchor="middle" dominant-baseline="central">5. DB connection</text>
+  <text class="ts" x="268" y="344" text-anchor="middle" dominant-baseline="central">Injected at placeholders</text>
+</g>
+<line class="al" x1="268" y1="356" x2="268" y2="370" stroke-width="1.5" marker-end="url(#arrow)"/>
+
+<!-- Step 6: Form processing -->
+<g class="step"><rect x="190" y="370" width="156" height="48" rx="8"/>
+  <text class="th" x="268" y="388" text-anchor="middle" dominant-baseline="central">6. Form processing</text>
+  <text class="ts" x="268" y="406" text-anchor="middle" dominant-baseline="central">PHP SMTP handlers</text>
+</g>
+<line class="al" x1="268" y1="418" x2="268" y2="432" stroke-width="1.5" marker-end="url(#arrow)"/>
+
+<!-- Step 7: Menu + footer split -->
+<g class="step"><rect x="190" y="432" width="156" height="48" rx="8"/>
+  <text class="th" x="268" y="450" text-anchor="middle" dominant-baseline="central">7. Menu + footer split</text>
+  <text class="ts" x="268" y="468" text-anchor="middle" dominant-baseline="central">Extract as ASP includes</text>
+</g>
+<line class="al" x1="268" y1="480" x2="268" y2="494" stroke-width="1.5" marker-end="url(#arrow)"/>
+
+<!-- Step 8: Code embeds -->
+<g class="step"><rect x="190" y="494" width="156" height="48" rx="8"/>
+  <text class="th" x="268" y="512" text-anchor="middle" dominant-baseline="central">8. Code embeds</text>
+  <text class="ts" x="268" y="530" text-anchor="middle" dominant-baseline="central">Global + page-level</text>
+</g>
+<line class="al" x1="268" y1="542" x2="268" y2="556" stroke-width="1.5" marker-end="url(#arrow)"/>
+
+<!-- Swappable folder output -->
+<g class="step"><rect x="190" y="556" width="156" height="36" rx="8"/>
+  <text class="th" x="268" y="574" text-anchor="middle" dominant-baseline="central">Swappable output</text>
+</g>
+
+<!-- Manual swap -->
+<text class="ts sl" x="268" y="610" text-anchor="middle">manual swap</text>
+<path d="M268 618 L268 644 L395 644 L395 568 L410 568" fill="none" class="al" stroke-width="1.5" marker-end="url(#arrow)"/>
+
+<!-- Server root container -->
+<rect class="ctr" x="412" y="46" width="220" height="608" rx="14" fill="none" stroke-width="1"/>
+<text class="ts cl" x="522" y="40" text-anchor="middle">server root</text>
+
+<!-- IIS config -->
+<g class="srv"><rect x="426" y="62" width="192" height="44" rx="8"/>
+  <text class="th" x="522" y="74" text-anchor="middle" dominant-baseline="central">IIS / web.config</text>
+  <text class="ts" x="522" y="94" text-anchor="middle" dominant-baseline="central">Rewrite, headers, routing</text>
+</g>
+
+<!-- Arrow IIS to website root -->
+<line class="al" x1="522" y1="106" x2="522" y2="124" stroke-width="1" marker-end="url(#arrow)"/>
+
+<!-- Website root folder -->
+<rect class="ctr" x="426" y="124" width="192" height="506" rx="10" fill="none" stroke-width="0.8"/>
+<text class="ts cl" x="522" y="142" text-anchor="middle">website root folder</text>
+<text class="ts cl" x="522" y="156" text-anchor="middle" style="font-size:11px;opacity:0.55">site served from here only</text>
+
+<!-- Root ASP files -->
+<g class="srv"><rect x="438" y="170" width="168" height="36" rx="8"/>
+  <text class="th" x="522" y="188" text-anchor="middle" dominant-baseline="central">Root ASP files</text>
+</g>
+
+<!-- .env -->
+<g class="srv"><rect x="438" y="218" width="168" height="44" rx="8"/>
+  <text class="th" x="522" y="234" text-anchor="middle" dominant-baseline="central">.env</text>
+  <text class="ts" x="522" y="252" text-anchor="middle" dominant-baseline="central">SMTP + DB credentials</text>
+</g>
+
+<!-- CMS content -->
+<g class="cms"><rect x="438" y="274" width="168" height="44" rx="8"/>
+  <text class="th" x="522" y="290" text-anchor="middle" dominant-baseline="central">CMS content</text>
+  <text class="ts" x="522" y="308" text-anchor="middle" dominant-baseline="central">SKU images + copy</text>
+</g>
+
+<!-- Webflow folder (swappable) -->
+<rect class="wfs" x="438" y="334" width="168" height="274" rx="8" fill="none" stroke-width="0.8"/>
+<text class="ts wfl" x="522" y="352" text-anchor="middle">Webflow folder (swappable)</text>
+
+<!-- Items inside webflow folder -->
+<g class="wf"><rect x="448" y="364" width="148" height="28" rx="6"/>
+  <text class="ts" x="522" y="378" text-anchor="middle" dominant-baseline="central">Processed ASP pages</text>
+</g>
+<g class="wf"><rect x="448" y="398" width="148" height="28" rx="6"/>
+  <text class="ts" x="522" y="412" text-anchor="middle" dominant-baseline="central">index.asp</text>
+</g>
+<g class="wf"><rect x="448" y="432" width="148" height="28" rx="6"/>
+  <text class="ts" x="522" y="446" text-anchor="middle" dominant-baseline="central">Isolated menu.asp</text>
+</g>
+<g class="wf"><rect x="448" y="466" width="148" height="28" rx="6"/>
+  <text class="ts" x="522" y="480" text-anchor="middle" dominant-baseline="central">Isolated footer.asp</text>
+</g>
+<g class="wf"><rect x="448" y="500" width="148" height="28" rx="6"/>
+  <text class="ts" x="522" y="514" text-anchor="middle" dominant-baseline="central">assets folder</text>
+</g>
+<g class="wf"><rect x="448" y="534" width="148" height="28" rx="6"/>
+  <text class="ts" x="522" y="548" text-anchor="middle" dominant-baseline="central">aico_search folder</text>
+</g>
+<g class="wf"><rect x="448" y="568" width="148" height="28" rx="6"/>
+  <text class="ts" x="522" y="582" text-anchor="middle" dominant-baseline="central">documents folder</text>
+</g>
+
+<!-- ERP / DBs -->
+<g class="ext"><rect x="650" y="62" width="112" height="44" rx="8"/>
+  <text class="th" x="706" y="78" text-anchor="middle" dominant-baseline="central">ERP / DBs</text>
+  <text class="ts" x="706" y="96" text-anchor="middle" dominant-baseline="central">live data</text>
+</g>
+<line class="el" x1="650" y1="84" x2="634" y2="84" stroke-width="1" marker-end="url(#arrow)"/>
+
+<!-- Prop. CMS -->
+<g class="ext"><rect x="650" y="228" width="112" height="44" rx="8"/>
+  <text class="th" x="706" y="244" text-anchor="middle" dominant-baseline="central">Prop. CMS</text>
+  <text class="ts" x="706" y="262" text-anchor="middle" dominant-baseline="central">external app</text>
+</g>
+<path d="M650 256 L624 256 L624 296 L608 296" fill="none" class="el" stroke-width="1" marker-end="url(#arrow)"/>
+
+</svg>
